@@ -46,18 +46,20 @@ Digit 3 is inside of 3 nested parentheses in the string.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.7 MB (beats 71.06%)  
-**Submitted:** 2026-09-02T06:38:08.972Z  
+**Memory:** 43.2 MB (beats 16.06%)  
+**Submitted:** 2026-09-16T11:13:21.818Z  
 
 ```java
 class Solution {
     public int maxDepth(String s) {
-        int c=0, res = 0;
+        int res = 0, c = 0;
 
         for(char ch : s.toCharArray())
         {
             if(ch == '(') c++;
-            else if(ch == ')') res = Math.max(res, c--);
+            else if(ch == ')') c--;
+
+            res = Math.max(res, c);
         }
 
         return res;
