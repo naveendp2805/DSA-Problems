@@ -41,30 +41,31 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 95.67%)  
-**Memory:** 42.5 MB (beats 95.85%)  
-**Submitted:** 2026-08-25T04:28:52.843Z  
+**Runtime:** 1 ms (beats 95.68%)  
+**Memory:** 42.9 MB (beats 45.60%)  
+**Submitted:** 2026-09-24T13:35:30.351Z  
 
 ```java
 class Solution {
     public boolean isSubsequence(String s, String t) {
         int n1 = s.length(), n2 = t.length();
 
-        if(n1 == 0) return true;
-        
+        if(n1 > n2) return false;
+
         int i=0, j=0;
 
-        while(j < n2)
+        while(i < n1 && j < n2)
         {
             if(s.charAt(i) == t.charAt(j))
             {
                 i++;
-                if(i == n1) return true;
-            }
-            j++;
+                j++;
+            } 
+            else
+                j++;
         }
 
-        return false;
+        return i == n1;
     }
 }
 ```
