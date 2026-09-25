@@ -9,7 +9,7 @@ You have a `RecentCounter` class which counts the number of recent requests with
 Implement the `RecentCounter` class:
 
 - RecentCounter() Initializes the counter with zero recent requests.
-- int ping(int t) Adds a new request at time t, where t represents some time in milliseconds, and returns the number of requests that has happened in the past 3000 milliseconds (including the new request). Specifically, return the number of requests that have happened in the inclusive range [t - 3000, t].
+- int ping(int t) Adds a new request at time t, where t represents some time in milliseconds, and returns the number of requests that have happened in the inclusive range [t - 3000, t], that is, the new request plus every earlier request that is no more than 3000 milliseconds older.
 
 It is  **guaranteed**  that every call to `ping` uses a strictly larger value of `t` than the previous call.
 
@@ -44,9 +44,9 @@ recentCounter.ping(3002);  // requests = [1, 100, 3001, 3002], range is [2,3002]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 17 ms (beats 99.85%)  
-**Memory:** 53.1 MB (beats 76.21%)  
-**Submitted:** 2026-09-01T15:44:34.567Z  
+**Runtime:** 18 ms (beats 98.89%)  
+**Memory:** 52.8 MB (beats 80.28%)  
+**Submitted:** 2026-09-25T15:00:10.947Z  
 
 ```java
 class RecentCounter {
