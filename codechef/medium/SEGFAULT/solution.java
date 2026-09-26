@@ -54,7 +54,7 @@ class Codechef
 	    
 	    for(int i=0; i<n; i++)
 	    {
-	        if(count[i] == max)
+	        if(count[i] > 1)
 	            res.add(i+1);
 	    }
 	    
