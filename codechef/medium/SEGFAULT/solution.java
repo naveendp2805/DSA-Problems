@@ -45,17 +45,10 @@ class Codechef
 	            count[j]++;
 	    }
 	    
-	    int max = 0;
-	    
-	    for(int i=0; i<n; i++)
+	    for(int i=1; i<=n; i++)
 	    {
-	        max = Math.max(max, count[i]);
-	    }
-	    
-	    for(int i=0; i<n; i++)
-	    {
-	        if(count[i] > 1)
-	            res.add(i+1);
+	        if(count[i-1] > 0 && !(i >= arr[i-1][0] && i <= arr[i-1][1]))
+	            res.add(i);
 	    }
 	    
 	    return res;
