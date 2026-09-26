@@ -59,7 +59,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-26T06:09:18.723Z  
+**Submitted:** 2026-09-26T06:14:38.025Z  
 
 ```java
 import java.util.*;
@@ -109,17 +109,10 @@ class Codechef
 	            count[j]++;
 	    }
 	    
-	    int max = 0;
-	    
-	    for(int i=0; i<n; i++)
+	    for(int i=1; i<=n; i++)
 	    {
-	        max = Math.max(max, count[i]);
-	    }
-	    
-	    for(int i=0; i<n; i++)
-	    {
-	        if(count[i] > 1)
-	            res.add(i+1);
+	        if(count[i-1] > 0 && !(i >= arr[i-1][0] && i <= arr[i-1][1]))
+	            res.add(i);
 	    }
 	    
 	    return res;
