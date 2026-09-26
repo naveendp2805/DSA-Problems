@@ -69,7 +69,7 @@ NO
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-26T04:52:07.003Z  
+**Submitted:** 2026-09-26T04:57:29.889Z  
 
 ```java
 import java.util.*;
@@ -100,8 +100,9 @@ class Codechef
             
             if(zeroes == ones)
                 System.out.println("YES");
-            else{
-                if((zeroes & 1) == 1 && (ones & 1) == 1)
+            else
+            {
+                if(((zeroes & 1) == 1 && (ones & 1) == 1))
                     System.out.println("NO");
                 else
                     System.out.println("YES");
