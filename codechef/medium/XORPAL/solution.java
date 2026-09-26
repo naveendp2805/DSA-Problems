@@ -26,8 +26,9 @@ class Codechef
             
             if(zeroes == ones)
                 System.out.println("YES");
-            else{
-                if((zeroes & 1) == 1 && (ones & 1) == 1)
+            else
+            {
+                if(((zeroes & 1) == 1 && (ones & 1) == 1))
                     System.out.println("NO");
                 else
                     System.out.println("YES");
