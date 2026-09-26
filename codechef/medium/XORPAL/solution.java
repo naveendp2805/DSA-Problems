@@ -24,10 +24,14 @@ class Codechef
                 else ones++;
             }
             
-            if((zeroes & 1) == 1 && (ones & 1) == 1)
-                System.out.println("NO");
-            else
+            if(zeroes == ones)
                 System.out.println("YES");
+            else{
+                if((zeroes & 1) == 1 && (ones & 1) == 1)
+                    System.out.println("NO");
+                else
+                    System.out.println("YES");
+            }
         }
 	}
 }
