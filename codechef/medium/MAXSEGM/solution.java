@@ -25,8 +25,7 @@ class Codechef
                 w[i] = sc.nextInt();
                 
             Map<Integer, Integer> map = new HashMap<>();
-            int i=0;
-            long sum = 0, res = 0;
+            int i=0, sum = 0, res = 0;
             
             for(int j=0; j<n; j++)
             {
