@@ -59,7 +59,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-26T06:08:45.041Z  
+**Submitted:** 2026-09-26T06:09:18.723Z  
 
 ```java
 import java.util.*;
@@ -118,7 +118,7 @@ class Codechef
 	    
 	    for(int i=0; i<n; i++)
 	    {
-	        if(count[i] == max)
+	        if(count[i] > 1)
 	            res.add(i+1);
 	    }
 	    
