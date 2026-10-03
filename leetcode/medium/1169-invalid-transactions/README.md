@@ -52,9 +52,9 @@ Output: ["bob,50,1200,mtv"]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 570 ms (beats 5.12%)  
-**Memory:** 46.9 MB (beats 97.05%)  
-**Submitted:** 2026-08-27T08:46:15.989Z  
+**Runtime:** 542 ms (beats 5.09%)  
+**Memory:** 47.7 MB (beats 13.23%)  
+**Submitted:** 2026-10-03T07:40:43.612Z  
 
 ```java
 class Solution {
@@ -63,17 +63,17 @@ class Solution {
 
         int n = transactions.length;
         boolean[] invalid = new boolean[n];
-        
+
         for(int i=0; i<n; i++)
         {
             String[] t1 = transactions[i].split(",");
-            
+
             String name1 = t1[0];
             int time1 = Integer.parseInt(t1[1]);
-            int amt1 = Integer.parseInt(t1[2]);
+            int amount1 = Integer.parseInt(t1[2]);
             String city1 = t1[3];
 
-            if(amt1 > 1000)
+            if(amount1 > 1000)
                 invalid[i] = true;
 
             for(int j=i+1; j<n; j++)
@@ -84,7 +84,7 @@ class Solution {
                 int time2 = Integer.parseInt(t2[1]);
                 String city2 = t2[3];
 
-                if(name1.equals(name2) && Math.abs(time1 - time2) <= 60 && !city1.equals(city2))
+                if(Math.abs(time1 - time2) <= 60 && name1.equals(name2) && !city1.equals(city2))
                 {
                     invalid[i] = true;
                     invalid[j] = true;
@@ -93,8 +93,10 @@ class Solution {
         }
 
         for(int i=0; i<n; i++)
+        {
             if(invalid[i])
                 res.add(transactions[i]);
+        }
 
         return res;
     }
