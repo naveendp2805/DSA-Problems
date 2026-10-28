@@ -45,15 +45,14 @@ Output: 3
 ## Solution
 
 **Language:** Java  
-**Runtime:** 32 ms (beats 36.45%)  
-**Memory:** 95.9 MB (beats 8.48%)  
-**Submitted:** 2026-08-31T06:49:16.371Z  
+**Runtime:** 35 ms (beats 20.57%)  
+**Memory:** 95.1 MB (beats 70.42%)  
+**Submitted:** 2026-10-28T10:18:42.917Z  
 
 ```java
 class Solution {
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
-
         for(int num : nums)
             set.add(num);
 
