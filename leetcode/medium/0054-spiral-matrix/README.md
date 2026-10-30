@@ -37,8 +37,8 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.2 MB (beats 9.57%)  
-**Submitted:** 2026-09-16T10:45:58.343Z  
+**Memory:** 42.7 MB (beats 81.96%)  
+**Submitted:** 2026-10-30T07:10:23.097Z  
 
 ```java
 class Solution {
@@ -48,21 +48,21 @@ class Solution {
         List<Integer> res = new ArrayList<>();
 
         int x = 0, y = 0;
-        int dx = 1, dy = 0;
+        int dx = 0, dy = 1;
 
         for(int i=0; i<m*n; i++)
         {
-            res.add(matrix[y][x]);
-            matrix[y][x] = -101;
+            res.add(matrix[x][y]);
 
-            int new_x = x + dx; 
+            matrix[x][y] = -101;
+
+            int new_x = x + dx;
             int new_y = y + dy;
 
-            if(!(new_x >= 0 && new_x < n && new_y >= 0 && new_y < m) || matrix[new_y][new_x] == -101)
-            {
-                int temp = dx;
-                dx = -dy;
-                dy = temp;       
+            if(!(new_x >= 0 && new_x < m && new_y >= 0 && new_y < n) || matrix[new_x][new_y] == -101) {
+                int temp = dy;
+                dy = -dx;
+                dx = temp;
             }
 
             x += dx;
