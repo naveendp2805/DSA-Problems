@@ -21,8 +21,9 @@ class Solution {
         {
             for(int col=n-1; col>=1; col--)
             {
-                if(matrix[row][0] == 0 || matrix[0][col] == 0)
+                if(matrix[row][0] == 0 || matrix[0][col] == 0) {
                     matrix[row][col] = 0;
+                }
             }
 
             if(zeroInFirstCol)
