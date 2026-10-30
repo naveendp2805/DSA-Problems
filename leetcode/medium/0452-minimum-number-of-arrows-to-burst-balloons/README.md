@@ -54,18 +54,18 @@ Explanation: The balloons can be burst by 2 arrows:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 52 ms (beats 66.05%)  
-**Memory:** 96 MB (beats 8.60%)  
-**Submitted:** 2026-10-03T06:34:47.680Z  
+**Runtime:** 51 ms (beats 91.41%)  
+**Memory:** 95.2 MB (beats 85.64%)  
+**Submitted:** 2026-10-30T12:51:38.537Z  
 
 ```java
 class Solution {
     public int findMinArrowShots(int[][] points) {
-        int n = points.length, res = 1;
-
+        int n = points.length;
         Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));
 
         int prev = points[0][1];
+        int res = 1;
 
         for(int i=1; i<n; i++)
         {
