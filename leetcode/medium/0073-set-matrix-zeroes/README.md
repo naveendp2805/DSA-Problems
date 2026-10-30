@@ -46,9 +46,9 @@ Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 47.2 MB (beats 97.27%)  
-**Submitted:** 2026-09-16T07:39:38.965Z  
+**Runtime:** 1 ms (beats 95.74%)  
+**Memory:** 47.2 MB (beats 88.82%)  
+**Submitted:** 2026-10-30T07:29:59.885Z  
 
 ```java
 class Solution {
@@ -74,8 +74,9 @@ class Solution {
         {
             for(int col=n-1; col>=1; col--)
             {
-                if(matrix[row][0] == 0 || matrix[0][col] == 0)
+                if(matrix[row][0] == 0 || matrix[0][col] == 0) {
                     matrix[row][col] = 0;
+                }
             }
 
             if(zeroInFirstCol)
