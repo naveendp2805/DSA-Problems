@@ -51,33 +51,33 @@ minStack.getMin(); // return -2
 ## Solution
 
 **Language:** Java  
-**Runtime:** 34 ms (beats 60.20%)  
-**Memory:** 99.8 MB (beats 64.36%)  
-**Submitted:** 2026-10-05T16:25:15.964Z  
+**Runtime:** 34 ms (beats 58.47%)  
+**Memory:** 99.3 MB (beats 94.19%)  
+**Submitted:** 2026-10-31T13:24:24.943Z  
 
 ```java
 class MinStack {
 
-    Stack<Integer> stack;
-	Stack<Integer> minStack;
+    Stack<Integer> stack, minStack;
 
     public MinStack() {
         stack = new Stack<>();
         minStack = new Stack<>();
     }
     
-    public void push(int x) {
-        stack.push(x);
+    public void push(int value) {
+        stack.push(value);
 
-        if(minStack.isEmpty() || x < minStack.peek())
-            minStack.push(x);
-        else
+        if(minStack.isEmpty() || value < minStack.peek()) {
+            minStack.push(value);
+        } else {
             minStack.push(minStack.peek());
+        }
     }
     
     public void pop() {
         stack.pop();
-		minStack.pop();
+        minStack.pop();
     }
     
     public int top() {
@@ -92,7 +92,7 @@ class MinStack {
 /**
  * Your MinStack object will be instantiated and called as such:
  * MinStack obj = new MinStack();
- * obj.push(val);
+ * obj.push(value);
  * obj.pop();
  * int param_3 = obj.top();
  * int param_4 = obj.getMin();
