@@ -1,4 +1,4 @@
-# License Key Formatting
+# Q2. License Key Formatting
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -12,6 +12,8 @@ Return  *the reformatted license key*.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -42,9 +44,9 @@ Explanation: The string s has been split into three parts, each part has 2 chara
 ## Solution
 
 **Language:** Java  
-**Runtime:** 13 ms (beats 45.99%)  
-**Memory:** 46.6 MB (beats 21.65%)  
-**Submitted:** 2026-09-12T16:56:30.659Z  
+**Runtime:** 14 ms (beats 42.00%)  
+**Memory:** 45.7 MB (beats 93.81%)  
+**Submitted:** 2026-11-14T06:42:27.951Z  
 
 ```java
 class Solution {
