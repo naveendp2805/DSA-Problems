@@ -1,4 +1,4 @@
-# Odd Even Linked List
+# Q2. Odd Even Linked List
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -41,8 +41,8 @@ Output: [2,3,6,7,1,5,4]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 46.4 MB (beats 35.60%)  
-**Submitted:** 2026-09-25T15:45:13.251Z  
+**Memory:** 45.7 MB (beats 88.44%)  
+**Submitted:** 2026-11-17T06:31:38.401Z  
 
 ```java
 /**
@@ -57,13 +57,12 @@ Output: [2,3,6,7,1,5,4]
  */
 class Solution {
     public ListNode oddEvenList(ListNode head) {
-        if(head == null || head.next == null)
-            return head;
-            
+        if(head == null) return head;
+
         ListNode odd = head, even = head.next;
         ListNode evenHead = even;
 
-        while(even != null && even.next != null)
+        while(even != null && even.next != null) 
         {
             odd.next = odd.next.next;
             odd = odd.next;
