@@ -1,4 +1,4 @@
-# Reverse Linked List
+# Q3. Reverse Linked List
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -47,8 +47,8 @@ Output: []
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44 MB (beats 83.18%)  
-**Submitted:** 2026-09-25T15:20:21.752Z  
+**Memory:** 43.6 MB (beats 91.28%)  
+**Submitted:** 2026-11-17T06:24:58.278Z  
 
 ```java
 /**
@@ -64,9 +64,8 @@ Output: []
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null, curr = head;
-
-        while(curr != null)
-        {
+        
+        while(curr != null) {
             ListNode next = curr.next;
             curr.next = prev;
             prev = curr;
