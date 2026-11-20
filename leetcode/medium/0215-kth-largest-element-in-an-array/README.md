@@ -1,4 +1,4 @@
-# Kth Largest Element in an Array
+# Q1. Kth Largest Element in an Array
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -12,6 +12,8 @@ Can you solve it without sorting?
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -38,24 +40,22 @@ Output: 4
 ## Solution
 
 **Language:** Java  
-**Runtime:** 45 ms (beats 71.78%)  
-**Memory:** 74.2 MB (beats 70.95%)  
-**Submitted:** 2026-10-06T13:07:32.651Z  
+**Runtime:** 46 ms (beats 74.43%)  
+**Memory:** 73.5 MB (beats 86.34%)  
+**Submitted:** 2026-11-20T06:36:15.997Z  
 
 ```java
 class Solution {
     public int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-        int res = 0, n = nums.length;
+        int n = nums.length;
 
         for(int i=0; i<k; i++) {
             pq.offer(nums[i]);
         }
 
-        for(int i=k; i<n; i++)
-        {
-            if(nums[i] > pq.peek())
-            {
+        for(int i=k; i<n; i++) {
+            if(nums[i] > pq.peek()) {
                 pq.poll();
                 pq.offer(nums[i]);
             }
