@@ -1,4 +1,4 @@
-# Linked List Cycle
+# Q1. Linked List Cycle
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -55,8 +55,8 @@ Explanation: There is no cycle in the linked list.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 45.8 MB (beats 99.08%)  
-**Submitted:** 2026-11-02T15:50:57.695Z  
+**Memory:** 45.8 MB (beats 98.31%)  
+**Submitted:** 2026-11-27T05:33:51.277Z  
 
 ```java
 /**
@@ -73,13 +73,14 @@ Explanation: There is no cycle in the linked list.
 public class Solution {
     public boolean hasCycle(ListNode head) {
         if(head == null) return false;
-
+        
         ListNode sp = head, fp = head.next;
 
-        while(sp != fp)
-        {
-            if(fp == null || fp.next == null)
+        while(sp != fp) {
+
+            if(fp == null || fp.next == null) {
                 return false;
+            }
 
             sp = sp.next;
             fp = fp.next.next;
